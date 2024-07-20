@@ -1,0 +1,37 @@
+.btnBurgeMenu {
+  width: 7rem;
+  height: 7rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}
+.burge {
+  width: 4.5rem;
+  height: 0.6rem;
+  background-color: var(--color-teal-light);
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.burge::before,
+.burge::after {
+  content: '';
+  position: absolute;
+  width: 4.5rem;
+  height: 0.6rem;
+  background-color: var(--color-teal-light);
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.burge::before {
+  transform: translateY(-1.2rem);
+}
+.burge::after {
+  transform: translateY(1.2rem);
+}

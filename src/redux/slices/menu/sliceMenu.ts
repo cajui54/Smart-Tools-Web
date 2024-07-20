@@ -1,21 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
+import { MenuSlice } from '../../../interfaces/menu';
 
-interface MenuSlice {
-  open: boolean;
-}
-
-const initialState: MenuSlice = {
+export const initialState: MenuSlice = {
   open: false,
+  classBurger: '',
+  classNavbar: 'animationNavbar',
 };
-
 export const menuSlice = createSlice({
-  name: "menu",
+  name: 'menu',
   initialState,
   reducers: {
-    openMenu: (state, { payload }: PayloadAction<MenuSlice>) => {
-      if (!payload.open) {
-        state = payload;
+    openMenu: (state) => {
+      if (!state.open) {
+        return {
+          open: true,
+          classBurger: 'animationButtonBurger',
+          classNavbar: '',
+        };
+      } else {
+        return initialState;
       }
     },
   },

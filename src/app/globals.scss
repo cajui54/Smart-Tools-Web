@@ -16,3 +16,34 @@ p {
   font-family: var(--font-roboto), sans-serif, Arial, Helvetica;
   font-size: 5rem;
 }
+
+.animationButtonBurger {
+  transform: translateX(-5rem);
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.animationButtonBurger::before {
+  transform: rotate(45deg) translate(35px, -35px) !important;
+}
+.animationButtonBurger::after {
+  transform: rotate(-45deg) translate(35px, 35px) !important;
+}
+.animationNavbar {
+  overflow: hidden;
+  width: 0 !important;
+  transition: all 0.5s ease-in-out !important;
+}
+.animationNavbar span {
+  opacity: 0 !important;
+  transition: all 0.2s ease-in-out !important;
+}
+@media screen and (min-width: 900px) {
+  .animationNavbar {
+    overflow: visible !important;
+    width: 50rem !important;
+  }
+  .animationNavbar span {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out !important;
+  }
+}
