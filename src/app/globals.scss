@@ -12,10 +12,13 @@
 body {
   background-color: var(--color-dark);
 }
-p {
+p,
+span {
   font-family: var(--font-roboto), sans-serif, Arial, Helvetica;
 }
-
+h2 {
+  font-family: var(--font-roboto);
+}
 .animationButtonBurger {
   transform: translateX(-5rem);
   background-color: transparent !important;

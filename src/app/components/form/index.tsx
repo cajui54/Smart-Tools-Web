@@ -4,6 +4,8 @@ import styleForm from './form.module.scss';
 import { SiConvertio } from 'react-icons/si';
 import { useForm } from 'react-hook-form';
 import { MdCleaningServices } from 'react-icons/md';
+import { TfiUppercase } from 'react-icons/tfi';
+import { RxLetterCaseCapitalize, RxLetterCaseLowercase } from 'react-icons/rx';
 
 interface ITextArea {
   textarea: string;
@@ -39,7 +41,7 @@ const FormConvertText = () => {
 
     setValue('textarea', textLowerCase);
   };
-  const handleFirstCase = ({ textarea }: ITextArea) => {
+  const handleCapitalizeCase = ({ textarea }: ITextArea) => {
     const text = textarea
       .split(' ')
       .map(
@@ -56,15 +58,27 @@ const FormConvertText = () => {
 
   return (
     <div className={styleForm.containerForm}>
-      <h2>
-        <SiConvertio />
-        <span>Converta seu Texto</span>
-      </h2>
       <form onSubmit={onSubmit}>
         <div className={styleForm.containerMenu}>
           <button onClick={handleResetField}>
             <MdCleaningServices />
             <span>reset</span>
+          </button>
+
+          <button onClick={handleSubmit(handleUppeCase)}>
+            <TfiUppercase />
+            <span>Uppercase</span>
+          </button>
+
+          <button onClick={handleSubmit(handleLowerCase)}>
+            <RxLetterCaseLowercase />
+            <span>Lowecase</span>
+          </button>
+
+          <button onClick={handleSubmit(handleCapitalizeCase)}>
+            <RxLetterCaseCapitalize />
+
+            <span>Capitalize</span>
           </button>
         </div>
         <div className={styleForm.areaetextContainer}>
@@ -103,7 +117,7 @@ const FormConvertText = () => {
           </button>
 
           <button
-            onClick={handleSubmit(handleFirstCase)}
+            onClick={handleSubmit(handleCapitalizeCase)}
             title="convert to capitalize text"
           >
             <SiConvertio />

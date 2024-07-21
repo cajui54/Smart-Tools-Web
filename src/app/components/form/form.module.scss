@@ -1,7 +1,7 @@
 .containerForm {
   margin: 0 auto;
   position: relative;
-  top: 15rem;
+  top: 12rem;
   width: 95%;
   z-index: 1;
   h2 {
@@ -48,8 +48,12 @@
   width: 80%;
   margin: 1rem 0;
   padding: 1rem;
+  display: flex;
+  align-items: center;
   button {
     padding: 1rem;
+    width: 7rem;
+    margin-left: 1rem;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -59,10 +63,14 @@
     color: var(--color-dark);
     border: none;
     transition: all 0.5s ease-in-out;
+    font-size: 1rem;
   }
   button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 5px var(--color-teal-light);
+  }
+  button svg {
+    font-size: 2rem;
   }
 }
 .areaetextContainer {

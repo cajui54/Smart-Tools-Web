@@ -1,0 +1,35 @@
+.articleGlobal {
+  position: relative;
+  margin: 20rem auto;
+  width: 90%;
+  p {
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+  p strong {
+    color: var(--color-teal-light);
+    margin: 0 0.5rem;
+  }
+  @media screen and (min-width: 700px) {
+    width: 60rem;
+  }
+}
+.containerTitle {
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  svg {
+    color: #fff;
+    font-size: 7rem;
+  }
+  h1 {
+    color: var(--color-teal-light);
+    font-family: var(--font-roboto);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

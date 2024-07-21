@@ -3,12 +3,14 @@ import { Montserrat, Roboto } from 'next/font/google';
 import './globals.scss';
 import Providers from '@/redux/Provider';
 import Header from './components/header';
+import Footer from './components/footer';
 
 export const metadata: Metadata = {
-  title: 'Convert Case - Convertor de Texto',
+  title: 'Smart Tool Web - Convertor de Texto',
   description:
-    'Converta seus texto em diversos formatos, Maiúscula, minúscola de manaeira rápida, simples e eficiênte',
-  keywords: 'convert case, maiúscula, minúcula, uppercase, lowercase',
+    'Smart Case Text é uma ferramenta web para converter textos em letrasMaiúsculas, Minúscula e todas as primeiras letras de cadas palavra Maiúsculaconverta seus textos para Mercado Livre, YouTube, entre outros serviços',
+  keywords:
+    'convert case, maiúscula, minúcula, uppercase, lowercase, capitalize',
   icons: {
     icon: ['./logo.png'],
     apple: ['./logo.png'],
@@ -40,6 +42,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <div>{children}</div>
+          <Footer />
         </Providers>
       </body>
     </html>
