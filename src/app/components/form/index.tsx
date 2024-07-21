@@ -62,10 +62,16 @@ const FormConvertText = () => {
         switch (letter) {
           case '0':
             return 'a';
+          case '/':
+            return 'ã';
           case '9':
             return 'A';
           case '8':
             return 'e';
+          case '*':
+            return 'ê';
+          case '♥':
+            return 'é';
           case '7':
             return 'E';
           case '6':
@@ -97,10 +103,16 @@ const FormConvertText = () => {
         switch (letter) {
           case 'a':
             return '0';
+          case 'ã':
+            return '/';
           case 'A':
             return '9';
           case 'e':
             return '8';
+          case 'ê':
+            return '*';
+          case 'é':
+            return '♥';
           case 'E':
             return '7';
           case 'i':
