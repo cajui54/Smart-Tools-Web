@@ -55,6 +55,76 @@ const FormConvertText = () => {
   const handleResetField = () => {
     resetField('textarea');
   };
+  const decodeWord = (text: string): string => {
+    return text
+      .split('')
+      .map((letter) => {
+        switch (letter) {
+          case '0':
+            return 'a';
+          case '9':
+            return 'A';
+          case '8':
+            return 'e';
+          case '7':
+            return 'E';
+          case '6':
+            return 'i';
+          case '5':
+            return 'I';
+          case '4':
+            return 'o';
+          case '3':
+            return 'O';
+          case '2':
+            return 'u';
+          case '1':
+            return 'U';
+          default:
+            return letter;
+        }
+      })
+      .join('');
+  };
+  const handleDecode = ({ textarea }: ITextArea) => {
+    const textDecoded = decodeWord(textarea);
+    setValue('textarea', textDecoded);
+  };
+  const encodeWord = (text: string): string => {
+    return text
+      .split('')
+      .map((letter) => {
+        switch (letter) {
+          case 'a':
+            return '0';
+          case 'A':
+            return '9';
+          case 'e':
+            return '8';
+          case 'E':
+            return '7';
+          case 'i':
+            return '6';
+          case 'I':
+            return '5';
+          case 'o':
+            return '4';
+          case 'O':
+            return '3';
+          case 'u':
+            return '2';
+          case 'U':
+            return '1';
+          default:
+            return letter;
+        }
+      })
+      .join('');
+  };
+  const handleEncode = ({ textarea }: ITextArea) => {
+    const textEncode = encodeWord(textarea);
+    setValue('textarea', textEncode);
+  };
 
   return (
     <div className={styleForm.containerForm}>
@@ -94,6 +164,20 @@ const FormConvertText = () => {
         )}
 
         <div className={styleForm.buttonsContainer}>
+          <button onClick={handleSubmit(handleEncode)} title="encode text">
+            <SiConvertio />
+            <div>
+              <span>Codificar Texto</span>
+              <span>T3XT0</span>
+            </div>
+          </button>
+          <button onClick={handleSubmit(handleDecode)} title="encode text">
+            <SiConvertio />
+            <div>
+              <span>Decodificar Texto</span>
+              <span>TEXTO</span>
+            </div>
+          </button>
           <button
             onClick={handleSubmit(handleUppeCase)}
             title="convert to uppercase text"
