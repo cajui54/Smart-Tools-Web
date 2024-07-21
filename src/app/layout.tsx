@@ -5,7 +5,7 @@ import Providers from '@/redux/Provider';
 import Header from './components/header';
 
 export const metadata: Metadata = {
-  title: 'Convert Case - JKS Web Sites',
+  title: 'Convert Case - Convertor de Texto',
   description:
     'Converta seus texto em diversos formatos, Maiúscula, minúscola de manaeira rápida, simples e eficiênte',
   keywords: 'convert case, maiúscula, minúcula, uppercase, lowercase',
