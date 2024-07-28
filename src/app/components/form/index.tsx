@@ -1,5 +1,5 @@
 'use client';
-import React, { FormEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 import styleForm from './form.module.scss';
 import { SiConvertio } from 'react-icons/si';
 import { useForm } from 'react-hook-form';
@@ -16,6 +16,7 @@ const FormConvertText = () => {
     setValue,
     resetField,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm<ITextArea>({ defaultValues: { textarea: '' } });
   const [copy, setCopy] = useState<string>('copiar');
@@ -86,6 +87,10 @@ const FormConvertText = () => {
             return 'u';
           case '1':
             return 'U';
+          case '+':
+            return 'm';
+          case '-':
+            return 'M';
           default:
             return letter;
         }
@@ -127,6 +132,10 @@ const FormConvertText = () => {
             return '2';
           case 'U':
             return '1';
+          case 'm':
+            return '+';
+          case 'M':
+            return '-';
           default:
             return letter;
         }
@@ -136,6 +145,9 @@ const FormConvertText = () => {
   const handleEncode = ({ textarea }: ITextArea) => {
     const textEncode = encodeWord(textarea);
     setValue('textarea', textEncode);
+  };
+  const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    console.log(event.target.value);
   };
 
   return (
@@ -168,6 +180,7 @@ const FormConvertText = () => {
           <textarea
             {...register('textarea', { required: true })}
             placeholder="Digite seu text aqui..."
+            onChange={handleChange}
           ></textarea>
         </div>
 

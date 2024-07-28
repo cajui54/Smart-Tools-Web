@@ -4,6 +4,7 @@ import './globals.scss';
 import Providers from '@/redux/Provider';
 import Header from './components/header';
 import Footer from './components/footer';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Smart Tool Web - Convertor de Texto',
@@ -38,6 +39,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className={`${montserrat.variable}, ${roboto.variable}`}>
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZR91CKDYN4"
+        ></Script>
+        <Script id="script google">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-ZR91CKDYN4');
+          `}
+        </Script>
+      </head>
       <body>
         <Providers>
           <Header />
