@@ -63,3 +63,20 @@ h2 {
 button {
   cursor: pointer;
 }
+.errorMessageInput {
+  color: #ff0000;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+.btnClose {
+  position: absolute;
+  top: -2.8rem;
+  right: -2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #ff0000;
+  background-color: transparent;
+  border: none;
+}

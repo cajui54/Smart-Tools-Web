@@ -24,7 +24,7 @@ const Navbar = () => {
           <div></div>
         </span>
       </Link>
-      <Link href="/" onClick={handleClick}>
+      <Link href="/tools/smart-buy" onClick={handleClick}>
         <span>
           Compra Inteligênte
           <div></div>

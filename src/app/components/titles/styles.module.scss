@@ -1,0 +1,35 @@
+.containerTitles {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  font-family: var(--font-roboto);
+  text-align: center;
+  position: relative;
+  svg {
+    position: absolute;
+    left: 3rem;
+    font-size: 5rem;
+    color: #fff;
+  }
+  h1 {
+    position: relative;
+    z-index: 1;
+    color: var(--color-teal-light);
+    font-size: 5rem;
+    text-shadow: 0 0 5px black;
+  }
+  h2 {
+    margin-top: -1rem;
+    margin-left: -3rem;
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 0.4px;
+  }
+  @media screen and (min-width: 420px) {
+    width: 400px;
+    svg {
+      left: 5rem;
+    }
+  }
+}

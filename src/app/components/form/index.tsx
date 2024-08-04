@@ -16,7 +16,6 @@ const FormConvertText = () => {
     setValue,
     resetField,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<ITextArea>({ defaultValues: { textarea: '' } });
   const [copy, setCopy] = useState<string>('copiar');
@@ -146,9 +145,6 @@ const FormConvertText = () => {
     const textEncode = encodeWord(textarea);
     setValue('textarea', textEncode);
   };
-  const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    console.log(event.target.value);
-  };
 
   return (
     <div className={styleForm.containerForm}>
@@ -179,8 +175,7 @@ const FormConvertText = () => {
           <button onClick={handleSubmit(handleCopy)}>{copy}</button>
           <textarea
             {...register('textarea', { required: true })}
-            placeholder="Digite seu text aqui..."
-            onChange={handleChange}
+            placeholder="Digite seu texto aqui..."
           ></textarea>
         </div>
 

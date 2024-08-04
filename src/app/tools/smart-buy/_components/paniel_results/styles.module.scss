@@ -1,0 +1,73 @@
+.mainScreen {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.containerResult {
+  color: #fff;
+  background-color: var(--color-dark);
+  height: 3.5rem;
+  padding-left: 1rem;
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.containerResult span:first-child {
+  color: var(--color-teal-light);
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.containerResult div {
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  height: 100%;
+  min-width: 13rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  svg {
+    color: var(--color-secunday);
+    font-size: 2.5rem;
+    margin-right: 1rem;
+  }
+  span {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+.containerResult div {
+  background-color: var(--color-secunday);
+  svg {
+    color: #22c55e;
+  }
+  span {
+    color: #22c55e;
+  }
+}
+.containerResult div {
+  background-color: var(--color-secunday);
+  svg {
+    color: #64748b;
+    filter: drop-shadow(1px 2px 5px #020617);
+  }
+}
+.containerResult:first-child div {
+  span {
+    color: #22c55e;
+  }
+}
+.containerResult:nth-child(2) div {
+  span {
+    color: #eab308;
+  }
+}
+.containerResult:nth-child(3) div {
+  span {
+    color: #dc2626;
+  }
+}
