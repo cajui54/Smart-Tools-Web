@@ -80,3 +80,9 @@ button {
   background-color: transparent;
   border: none;
 }
+.isActive {
+  font-weight: bold !important;
+}
+.isActive div {
+  width: 4rem !important;
+}
