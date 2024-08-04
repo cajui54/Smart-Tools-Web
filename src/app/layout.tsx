@@ -40,6 +40,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className={`${montserrat.variable}, ${roboto.variable}`}>
       <head>
+        <meta
+          name="google-site-verification"
+          content="gyZyuWhHUqK5ioosV8ubuh-IENbhgJm3_IzZGqvnyN0"
+        />
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-ZR91CKDYN4"
