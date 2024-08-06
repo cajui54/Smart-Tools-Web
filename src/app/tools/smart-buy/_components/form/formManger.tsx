@@ -4,11 +4,17 @@ import { FaToolbox } from 'react-icons/fa';
 import { GiMoneyStack } from 'react-icons/gi';
 import { TiPlusOutline } from 'react-icons/ti';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
-import { useDispatch } from 'react-redux';
-import { closeForm, addItem } from '@/redux/slices/smartBuy/smartBuySlice';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  closeForm,
+  addItem,
+  cartItems,
+} from '@/redux/slices/smartBuy/smartBuySlice';
 import { initialState } from '@/redux/slices/smartBuy/smartBuySlice';
 import { useForm } from 'react-hook-form';
 import ErrorMessage from '@/app/components/messages/errorMessage';
+import ListItems from '../listItems';
+import { RootState } from '@/redux/store';
 
 interface IFormManager {
   item: string;
@@ -17,6 +23,7 @@ interface IFormManager {
 }
 
 const FormManager = () => {
+  const { items } = useSelector((state: RootState) => state.smartBuy);
   const {
     register,
     handleSubmit,
@@ -41,65 +48,69 @@ const FormManager = () => {
 
   const handleClickSubmit = (data: IFormManager) => {
     dispatch(addItem(data));
+    dispatch(cartItems(data));
     resetAllFields();
   };
   return (
-    <form
-      className={`${styles.form} ${styles.formManager}`}
-      onSubmit={handleOnSubmit}
-    >
-      <button
-        className="btnClose"
-        title="fechar formulário"
-        onClick={handleCloseForm}
+    <div>
+      <form
+        className={`${styles.form} ${styles.formManager}`}
+        onSubmit={handleOnSubmit}
       >
-        <IoIosCloseCircleOutline />
-      </button>
-      <label>
-        <span>Produto: </span>
-        <FaToolbox />
-
-        <input
-          type="text"
-          {...register('item')}
-          placeholder="nome do produto"
-        />
-      </label>
-
-      <div className={styles.amountInputs}>
+        <button
+          className="btnClose"
+          title="fechar formulário"
+          onClick={handleCloseForm}
+        >
+          <IoIosCloseCircleOutline />
+        </button>
         <label>
-          <span>Valor: </span>
-          <GiMoneyStack />
+          <span>Produto: </span>
+          <FaToolbox />
 
           <input
-            type="number"
-            {...register('price', { required: true })}
-            placeholder="R$:9,99"
-            step="0.010"
-            min={0}
+            type="text"
+            {...register('item')}
+            placeholder="nome do produto"
           />
         </label>
 
-        <label>
-          <span>Quantidade: </span>
-          <TiPlusOutline />
+        <div className={styles.amountInputs}>
+          <label>
+            <span>Valor: </span>
+            <GiMoneyStack />
 
-          <input
-            type="number"
-            {...register('amount', { required: true, value: 1 })}
-            placeholder="0"
-            min={1}
-          />
-        </label>
-      </div>
-      {Object.keys(errors).length > 0 && (
-        <ErrorMessage message="Preencha os campos obrigatórios !" />
-      )}
-      <div className={styles.containerButtonsII}>
-        <button type="submit">Adicionar</button>
-        <button type="reset">Cancelar</button>
-      </div>
-    </form>
+            <input
+              type="number"
+              {...register('price', { required: true })}
+              placeholder="R$:9,99"
+              step="0.010"
+              min={0}
+            />
+          </label>
+
+          <label>
+            <span>Quantidade: </span>
+            <TiPlusOutline />
+
+            <input
+              type="number"
+              {...register('amount', { required: true, value: 1 })}
+              placeholder="0"
+              min={1}
+            />
+          </label>
+        </div>
+        {Object.keys(errors).length > 0 && (
+          <ErrorMessage message="Preencha os campos obrigatórios !" />
+        )}
+        <div className={styles.containerButtonsII}>
+          <button type="submit">Adicionar</button>
+          <button type="reset">Cancelar</button>
+        </div>
+      </form>
+      {items.length > 0 && <ListItems />}
+    </div>
   );
 };
 

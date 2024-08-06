@@ -1,4 +1,4 @@
-import { ISmartBuy } from '@/interfaces/smartBuy';
+import { ISmartBuy, Item } from '@/interfaces/smartBuy';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface IData {
@@ -11,6 +11,7 @@ export const initialState: ISmartBuy = {
   valueCurrent: 0,
   valueSpend: 0,
   showForm: false,
+  items: [],
 };
 const smartBuySlice = createSlice({
   name: 'smartBuy',
@@ -32,7 +33,18 @@ const smartBuySlice = createSlice({
       state.valueSpend += totalPrice;
       return state;
     },
+    cartItems(state, { payload }: PayloadAction<IData>) {
+      const newItem: Item = {
+        name: payload.item,
+        amout: payload.amount,
+        price: payload.price,
+        total: payload.price * payload.amount,
+      };
+      state.items = [...state.items, newItem];
+      return state;
+    },
   },
 });
-export const { addValueTotal, closeForm, addItem } = smartBuySlice.actions;
+export const { addValueTotal, closeForm, addItem, cartItems } =
+  smartBuySlice.actions;
 export default smartBuySlice.reducer;

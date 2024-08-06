@@ -1,0 +1,39 @@
+.main {
+  margin-top: 4rem;
+  h2 {
+    font-size: 2.5rem;
+    color: mediumseagreen;
+    text-align: center;
+  }
+}
+.containerListItem {
+  width: 80%;
+  height: 10rem;
+  margin: 2rem auto;
+
+  li {
+    background-color: var(--color-dark);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #22c55e;
+    margin-bottom: 1rem;
+  }
+
+  div {
+    position: relative;
+  }
+  div span:first-child {
+    color: #22c55e;
+    font-weight: bold;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 1rem;
+  }
+  div span:last-child {
+    font-size: 1.5rem;
+  }
+}

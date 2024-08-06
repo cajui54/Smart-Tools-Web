@@ -1,6 +1,7 @@
 .mainForm {
   padding: 0.5rem;
   background-color: #1c1917;
+  background-color: var(--color-dark);
   width: 95%;
   margin: 0 auto;
   border-radius: 0.4rem;
@@ -131,7 +132,7 @@
 .amountInputs {
   display: flex;
   label:first-child input {
-    width: 20rem;
+    width: 17rem;
   }
   label:last-child span {
     font-size: 0.9rem !important;
