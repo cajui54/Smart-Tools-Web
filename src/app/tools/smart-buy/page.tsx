@@ -7,9 +7,9 @@ import MainForm from './_components/form';
 import ArticleSmartBuy from './_components/article';
 
 export const metadata: Metadata = {
-  title: 'Compra Inteligente - Smart Tools Web',
+  title: 'Smart Buy - Smart Tools Web',
   description:
-    'Matenha sua compras sobre controle, esse site te ajuda a gerenciar seus gasto de uma forma fácil e eficiênte',
+    'Matenha sua compras sobre controle, esse site vai te ajuda a gerenciar seus gasto de uma forma fácil e eficiênte',
   keywords:
     'Smart Tools Web, calculadora, compras, gastos, gerenciador de gasto',
 };
