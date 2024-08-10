@@ -35,7 +35,7 @@ const smartBuySlice = createSlice({
     },
     cartItems(state, { payload }: PayloadAction<IData>) {
       const newItem: Item = {
-        name: payload.item,
+        name: payload.item === '' ? 'Produto' : payload.item,
         amout: payload.amount,
         price: payload.price,
         total: payload.price * payload.amount,

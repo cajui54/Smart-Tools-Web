@@ -68,3 +68,36 @@
     margin-bottom: 4rem;
   }
 }
+
+.notFound {
+  width: 100%;
+  height: 100vh;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  span svg {
+    font-size: 20rem;
+    color: #16a34a;
+  }
+  h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  a svg {
+    transform: scale(1.2);
+    margin-right: 1rem;
+  }
+  a {
+    text-decoration: none;
+    background-color: #16a34a;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 4rem;
+    font-family: var(--font-roboto);
+    border-radius: 0.5rem;
+  }
+}
