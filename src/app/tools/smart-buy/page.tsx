@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     'Matenha sua compras sobre controle, esse site vai te ajuda a gerenciar seus gasto de uma forma fácil e eficiênte',
   keywords:
     'Smart Tools Web, calculadora, compras, gastos, gerenciador de gasto',
+  icons: {
+    icon: ['./logo.png'],
+    apple: ['./logo.png'],
+    shortcut: ['./logo.png'],
+  },
 };
 const titleData = {
   svg: BsCart4,

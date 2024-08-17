@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
+import { convertBrMoney } from '@/utils/formatMoney';
 
 const ListItems = () => {
   const { items } = useSelector((state: RootState) => state.smartBuy);
@@ -17,7 +18,7 @@ const ListItems = () => {
             </div>
             <div>
               <span>Preço</span>
-              <span>{item.price}</span>
+              <span>{convertBrMoney(item.price)}</span>
             </div>
             <div className="amountItem">
               <span>Quant.</span>
@@ -25,7 +26,7 @@ const ListItems = () => {
             </div>
             <div>
               <span>Total:</span>
-              <span>{item.total}</span>
+              <span>{convertBrMoney(item.total)}</span>
             </div>
           </li>
         ))}

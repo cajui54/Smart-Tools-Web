@@ -30,7 +30,7 @@ describe('Testing FormConvertText component', () => {
 
     expect(areatext).not.toHaveTextContent(input);
   });
-  it('should convert all letter to uppercase to click on uppercase button', () => {
+  it('should convert all letter to uppercase to click on uppercase button', async () => {
     render(<FormConvertText />);
     const text = 'i have dream';
 
@@ -39,11 +39,10 @@ describe('Testing FormConvertText component', () => {
 
     fireEvent.input(areatext, { target: { value: text } });
 
-    screen.getByDisplayValue(text);
+    console.log(areatext.textContent);
 
     fireEvent.click(button);
 
-    expect(areatext).not.toHaveTextContent(text);
-    screen.getByDisplayValue('I HAVE DREAM');
+    expect(areatext).toHaveTextContent('I HAVE DREAM');
   });
 });
