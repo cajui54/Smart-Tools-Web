@@ -6,6 +6,10 @@ import { useForm } from 'react-hook-form';
 import { MdCleaningServices } from 'react-icons/md';
 import { TfiUppercase } from 'react-icons/tfi';
 import { RxLetterCaseCapitalize, RxLetterCaseLowercase } from 'react-icons/rx';
+import { LuBinary } from 'react-icons/lu';
+import { BsAlphabetUppercase } from 'react-icons/bs';
+import { FaTextWidth } from 'react-icons/fa';
+import { IoText } from 'react-icons/io5';
 
 interface ITextArea {
   textarea: string;
@@ -184,51 +188,45 @@ const FormConvertText = () => {
         )}
 
         <div className={styleForm.buttonsContainer}>
-          <button onClick={handleSubmit(handleEncode)} title="encode text">
-            <SiConvertio />
-            <div>
-              <span>Codificar Texto</span>
-              <span>T3XT0</span>
-            </div>
-          </button>
-          <button onClick={handleSubmit(handleDecode)} title="encode text">
-            <SiConvertio />
-            <div>
-              <span>Decodificar Texto</span>
-              <span>TEXTO</span>
-            </div>
-          </button>
           <button
             onClick={handleSubmit(handleUppeCase)}
             title="convert to uppercase text"
           >
-            <SiConvertio />
-            <div>
-              <span>Todas Maiúculas</span>
-              <span>TEXTO</span>
-            </div>
+            <BsAlphabetUppercase />
+
+            <span>Todas Maiúculas</span>
+            <span>TEXTO</span>
           </button>
 
           <button
             onClick={handleSubmit(handleLowerCase)}
             title="convert to lowercase text"
           >
-            <SiConvertio />
-            <div>
-              <span>Todas Minúsculas</span>
-              <span>texto</span>
-            </div>
+            <FaTextWidth />
+
+            <span>Todas Minúsculas</span>
+            <span>texto</span>
           </button>
 
           <button
             onClick={handleSubmit(handleCapitalizeCase)}
             title="convert to capitalize text"
           >
+            <IoText />
+
+            <span>Primeira Maiúculas</span>
+            <span>Texto</span>
+          </button>
+
+          <button onClick={handleSubmit(handleEncode)} title="encode text">
+            <LuBinary />
+            <span>Codificar</span>
+            <span>T3XT0</span>
+          </button>
+          <button onClick={handleSubmit(handleDecode)} title="encode text">
             <SiConvertio />
-            <div>
-              <span>Primeira Maiúculas</span>
-              <span>Texto</span>
-            </div>
+            <span>Decodificar</span>
+            <span>TEXTO</span>
           </button>
         </div>
       </form>

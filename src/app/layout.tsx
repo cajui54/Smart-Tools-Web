@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { Montserrat, Roboto } from 'next/font/google';
 import './globals.scss';
 import Providers from '@/redux/Provider';
-import Header from './components/header';
-import Footer from './components/footer';
+import Header from './_components/header';
+import Footer from './_components/footer';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Smart Tool Web - Convertor de Texto',
   description:
-    'Smart Case Text é uma ferramenta web para converter textos em letrasMaiúsculas, Minúscula e todas as primeiras letras de cadas palavra Maiúsculaconverta seus textos para Mercado Livre, YouTube, entre outros serviços',
+    'Smart Case Text é uma ferramenta web para converter textos em letras Maiúsculas, Minúscula e todas as primeiras letras de cadas palavra Maiúsculaconverta seus textos para Mercado Livre, YouTube, entre outros serviços',
   keywords:
     'convert case, maiúscula, minúcula, uppercase, lowercase, capitalize',
   icons: {

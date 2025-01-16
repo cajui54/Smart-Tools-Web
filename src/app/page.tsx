@@ -1,11 +1,9 @@
-import ArticleConvertText from './components/articles';
-import FormConvertText from './components/form';
-import Loading from './loading';
-import styles from './page.module.scss';
+import ArticleConvertText from './_components/articles';
+import FormConvertText from './_components/form';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <FormConvertText />
       <ArticleConvertText />
     </main>

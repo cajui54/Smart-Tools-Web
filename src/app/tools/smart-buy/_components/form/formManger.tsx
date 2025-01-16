@@ -12,7 +12,7 @@ import {
 } from '@/redux/slices/smartBuy/smartBuySlice';
 import { initialState } from '@/redux/slices/smartBuy/smartBuySlice';
 import { useForm } from 'react-hook-form';
-import ErrorMessage from '@/app/components/messages/errorMessage';
+import ErrorMessage from '@/app/_components/messages/errorMessage';
 import ListItems from '../listItems';
 import { RootState } from '@/redux/store';
 

@@ -1,8 +1,9 @@
 :root {
   font-size: 65.2%;
   --color-dark: #0c0a09;
-  --color-teal-light: #14b8a6;
+  --color-teal-light: #4ade80;
   --color-secunday: #0f172a;
+  --color-black-light: #121214;
 }
 * {
   margin: 0;
@@ -16,7 +17,8 @@ p,
 span {
   font-family: var(--font-roboto), sans-serif, Arial, Helvetica;
 }
-h2 {
+h2,
+h1 {
   font-family: var(--font-roboto);
 }
 .animationButtonBurger {
@@ -89,4 +91,7 @@ button {
 .amountItem {
   width: 4rem;
   text-align: center;
+}
+.errorAsteristic {
+  color: red !important;
 }
