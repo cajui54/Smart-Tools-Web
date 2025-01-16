@@ -79,6 +79,10 @@
   scrollbar-color: #0f172a #14b8a6;
   scrollbar-width: thin;
   position: relative;
+
+  @media screen and (min-width: 900px) {
+    width: 80rem;
+  }
   button {
     position: absolute;
     right: 1rem;
@@ -96,6 +100,12 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 900px) {
+    width: 80rem;
+    justify-content: start;
+    margin-left: 1rem;
+  }
   button {
     display: flex;
     flex-direction: column;
@@ -127,59 +137,3 @@
     color: #fff;
   }
 }
-/*.buttonsContainer {
-
-  padding: 1rem;
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  button {
-    overflow: hidden;
-    height: 4rem;
-    width: 30rem;
-    margin: 0.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    border: none;
-    border: 1px solid var(--color-teal-light);
-    border-radius: 0.5rem;
-    transition: all 0.5s ease-in;
-  }
-  button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 5px var(--color-teal-light);
-  }
-  button svg {
-    transform: scale(1.5);
-    color: var(--color-teal-light);
-    margin-left: 1rem;
-  }
-  button span {
-    color: #fff;
-    letter-spacing: 0.1rem;
-  }
-  button div {
-    align-items: center;
-    background-color: var(--color-dark);
-    display: flex;
-    justify-content: space-between;
-    height: 95%;
-    width: 80%;
-    padding: 0 0.9rem;
-    border-radius: 5rem;
-  }
-  @media screen and (min-width: 700px) {
-    display: grid;
-    grid-template-columns: repeat(2, 30rem);
-    grid-gap: 1rem 2rem;
-  }
-  @media screen and (min-width: 1000px) {
-    display: flex;
-    flex-direction: row;
-  }
-}
-*/
