@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 const Navbar = () => {
   const navLink = [
     { href: '/', title: 'Convertor de Textos' },
-    { href: '/tools/smart-buy', title: 'Compra Inteligente' },
+    { href: '/tools/smart-buy', title: 'Controle seus Gastos' },
   ];
   const dispatch = useDispatch();
   const menu = useSelector((state: RootState) => state.menu);

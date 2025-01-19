@@ -1,13 +1,14 @@
 .containerTitles {
   width: 95%;
   margin: 2rem auto;
+  margin-top: 15rem;
   font-family: var(--font-roboto);
   display: flex;
   justify-content: center;
   align-items: center;
   h1 span {
     color: var(--color-teal-light);
-    font-size: 3rem;
+    font-size: 4rem;
   }
   h1 svg {
     color: #fff;
@@ -15,7 +16,7 @@
   }
   p {
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
     margin-top: -0.5rem;
