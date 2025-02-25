@@ -5,7 +5,7 @@ import Providers from '@/redux/Provider';
 import Header from './_components/header';
 import Footer from './_components/footer';
 import Script from 'next/script';
-
+import { Analytics } from '@vercel/analytics/react';
 export const metadata: Metadata = {
   title: 'Smart Tool Web - Convertor de Texto',
   description:
@@ -63,6 +63,7 @@ export default function RootLayout({
           <div>{children}</div>
           <Footer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

@@ -1,0 +1,35 @@
+.mainScreenManager {
+  width: 95%;
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: #171717;
+  @media screen and (min-width: 600px) {
+    width: 50rem;
+  }
+  div {
+    padding: 0 2rem;
+    background-color: #0a0a0a;
+    height: 5rem;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-teal-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  div span:first-child {
+    color: var(--color-teal-light);
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+  }
+  div span:last-child {
+    font-size: 1.9rem;
+    font-weight: bold;
+  }
+  div span:last-child svg {
+    margin-left: 1rem;
+    transform: scale(1.8);
+    color: var(--color-teal-light);
+  }
+}

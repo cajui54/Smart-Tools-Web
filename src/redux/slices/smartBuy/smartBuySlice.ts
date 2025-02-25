@@ -1,5 +1,4 @@
 import { ISmartBuy, Item } from '@/interfaces/smartBuy';
-import { getCartStorage, setCartStorage } from '@/utils/sessionStorageManger';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IData {
@@ -42,11 +41,7 @@ const smartBuySlice = createSlice({
         total: payload.price * payload.amount,
       };
 
-      setCartStorage('items', newItem);
-
-      state.items = getCartStorage('items');
-
-      console.log(state.items);
+      state.items = [...state.items, newItem];
 
       return state;
     },

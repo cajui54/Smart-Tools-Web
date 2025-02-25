@@ -96,3 +96,23 @@ button {
 .errorAsteristic {
   color: red !important;
 }
+
+.focusInputOn span:first-child {
+  background-color: #171717 !important;
+  font-size: 1.2rem !important;
+  top: -0.6rem !important;
+}
+.focusInputOn input {
+  background-color: #171717 !important;
+}
+
+.errorInput span {
+  color: #fa4d4d !important;
+}
+.errorInput svg {
+  color: #fa4d4d !important;
+}
+.errorInput input {
+  border-color: #fa4d4d !important;
+  background-color: #f7acac;
+}

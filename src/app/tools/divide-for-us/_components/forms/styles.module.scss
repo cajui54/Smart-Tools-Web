@@ -1,0 +1,80 @@
+.mainForm {
+  width: 90%;
+  min-height: 15rem;
+  margin: 1rem auto;
+  background-color: #171717;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media screen and (min-height: 600px) {
+    width: 50rem;
+  }
+}
+.containerInput {
+  width: 80%;
+  margin: 0 auto;
+}
+.containerInput p {
+  color: #ff0000;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  letter-spacing: 0.1rem;
+}
+.label {
+  display: block;
+  position: relative;
+}
+.label span:first-child {
+  color: var(--color-teal-light);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  top: 0.3rem;
+  left: 1rem;
+}
+.label svg {
+  position: absolute;
+  color: var(--color-teal-light);
+  top: 1.5rem;
+  left: 1rem;
+  font-size: 3rem;
+}
+.inputElement {
+  text-align: center;
+  width: 25rem;
+  background-color: var(--color-dark);
+  border: none;
+  padding: 1.7rem 1.5rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--color-teal-light);
+  color: #fff;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.label button {
+  position: relative;
+  left: 2rem;
+  padding: 1rem;
+  background-color: var(--color-teal-light);
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 2rem;
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+}
+.label button:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.astheristic {
+  color: #fff;
+  font-size: 1.5rem;
+  position: relative;
+  top: -2.5rem;
+  left: 0.5rem;
+}
